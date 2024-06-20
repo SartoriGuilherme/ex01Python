@@ -29,7 +29,3 @@ class TestProject(unittest.TestCase):
     def test_AgriculturalProduct734(self):
         agriculturalProduct734 = AgriculturalProduct("Melancia", 1.99, 734.0, 0.05)
         self.assertAlmostEqual(1548.4831, agriculturalProduct734.getFinalPrice())
-
-
-if __name__ == '__main__':
-    unittest.main()
