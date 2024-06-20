@@ -15,8 +15,8 @@ class TestProject(unittest.TestCase):
         self.assertAlmostEqual(1019.61, industrializedProduct150.getFinalPrice())
 
     def test_IndustrializedProduct250(self):
-        industrializedProduct250 = IndustrializedProduct("Colher", 5, 150, 0.30, 1.12, 1.05)
-        self.assertAlmostEqual(1019.61, industrializedProduct250.getFinalPrice())
+        industrializedProduct250 = IndustrializedProduct("Máscara", 2.5, 250, 0.25, 1.12, 1.05)
+        self.assertAlmostEqual(863.65, industrializedProduct250.getFinalPrice())
 
     def test_AgriculturalProduct3(self):
         agriculturalProduct3 = AgriculturalProduct("Laranja", 3.45, 3, 0.10)
