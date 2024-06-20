@@ -9,11 +9,11 @@ class IndustrializedProduct(Product):
 
     def getFinalPrice(self) -> float:
         if self.quantity > 0 and self.quantity <= 50:
-            return (self.quantity * self.price) * 1.12 * self._icms * self._ipi + (self.quantity * self.additionalTransport)
+            return (self.quantity * self.price) * 1.12 * self.__icms * self.__ipi + (self.quantity * self.additionalTransport)
         elif self.quantity >= 51 and self.quantity <= 200:
-            return (self.quantity * self.price) * 1.105 * self._icms * self._ipi + (self.quantity * self.additionalTransport)
+            return (self.quantity * self.price) * 1.105 * self.__icms * self.__ipi + (self.quantity * self.additionalTransport)
         else:
-            return (self.quantity * self.price) * 1.09 * self._icms * self._ipi + (self.quantity * self.additionalTransport)
+            return (self.quantity * self.price) * 1.09 * self.__icms * self.__ipi + (self.quantity * self.additionalTransport)
 
     @property
     def icms(self):
