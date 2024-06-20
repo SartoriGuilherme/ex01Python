@@ -3,10 +3,10 @@ from abc import ABC, abstractmethod
 
 class Product(ABC):
     def __init__(self, name, price, quantity, additionalTransport):
-        self._name = name
-        self._price = price
-        self._quantity = quantity
-        self._additionalTransport = additionalTransport
+        self.__name = name
+        self.__price = price
+        self.__quantity = quantity
+        self.__additionalTransport = additionalTransport
 
     @abstractmethod
     def getFinalPrice(self):
@@ -14,16 +14,16 @@ class Product(ABC):
 
     @property
     def name(self):
-        return self._name
+        return self.__name
 
     @property
     def price(self):
-        return self._price
+        return self.__price
 
     @property
     def quantity(self):
-        return self._quantity
+        return self.__quantity
 
     @property
     def additionalTransport(self):
-        return self._additionalTransport
+        return self.__additionalTransport
