@@ -4,8 +4,8 @@ from Product import Product
 class IndustrializedProduct(Product):
     def __init__(self, name: str, price: float, quantity: float, additionalTransport: float, icms: float, ipi: float):
         super().__init__(name, price, quantity, additionalTransport)
-        self._icms = icms
-        self._ipi = ipi
+        self.__icms = icms
+        self.__ipi = ipi
 
     def getFinalPrice(self) -> float:
         if self.quantity > 0 and self.quantity <= 50:
@@ -17,8 +17,8 @@ class IndustrializedProduct(Product):
 
     @property
     def icms(self):
-        return self._icms
+        return self.__icms
 
     @property
     def ipi(self):
-        return self._ipi
+        return self.__ipi
